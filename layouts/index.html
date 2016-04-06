@@ -1,0 +1,43 @@
+{{ partial "head.html" . }}
+
+{{ partial "header.html" . }}
+
+<!-- Page Content -->
+<div class="container">
+
+  <!-- Page Heading -->
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="page-header">Page Heading
+        <small>Secondary Text</small>
+      </h1>
+    </div>
+  </div>
+  <!-- /.row -->
+
+  {{ range where .Data.Pages "Section" "post" }}
+    <!-- Project One -->
+    <div class="row">
+      <div class="col-md-7">
+        <a href="#">
+          <img class="img-responsive" src="http://placekitten.com/700/300" alt="">
+        </a>
+      </div>
+      <div class="col-md-5">
+        <h3>{{ .Title | markdownify }}</h3>
+        <h4>Subheading</h4>
+        <p>{{ .Summary }}</p>
+        <a class="btn btn-primary" href="{{ .Permalink }}">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
+      </div>
+    </div>
+    <!-- /.row -->
+
+    <hr>
+  {{ end }}
+
+</div>
+<!-- /.container -->
+
+{{ partial "footer.html" . }}
+
+{{ partial "foot.html" . }}
