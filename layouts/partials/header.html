@@ -1,55 +1,32 @@
-<!-- Navigation -->
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<header id="header">
   <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-    </div>
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </div>
-    <!-- /.navbar-collapse -->
-  </div>
-  <!-- /.container -->
-</nav>
+    <div class="row">
 
-{{/*
-<header class="site-header">
-  <div class="wrapper">
-
-    <a class="site-title" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-
-    <nav class="site-nav">
-      <a href="#" class="menu-icon"><i class="fa fa-bars fa-lg"></i></a>
-
-      <div class="trigger">
-        <a class="page-link" href="{{ .Site.BaseURL }}">Posts</a>
-
-        {{ range where .Site.Pages "Section" "page" }}
-          <a class="page-link" href="{{ .Permalink }}">{{ .Title }}</a>
-        {{ end }}
-
-        {{ with .Site.Taxonomies.tags }}
-          <a class="page-link" href="{{ .Site.BaseURL }}/tags">Tags</a>
-        {{ end }}
-
-        <a class="page-link" href="{{ .Site.RSSLink }}">Subscribe</a>
-
+      <div class="col-md-3 col-xs-3">
+        <div calss="logo-wrapper">
+          <div class="logo">
+            <a href="//innoki.de"><div class="logo-wrapper" style="width:180px;left:0px;top:0px;"><img src="/img/logo.png" alt="INNOKI" /></div></a>
+          </div>
+        </div>
       </div>
-    </nav>
 
+      <div class="col-md-9 col-xs-9">
+        <nav id="main-menu-top">
+          <ul id="menu-res" class="main-menu">
+            <li class="menu-item"><a title="Start" href="//innoki.de/#header_slider">Start</a></li>
+            <li class="menu-item"><a title="Angebot" href="//innoki.de/#angebot">Angebot</a></li>
+            <li class="menu-item"><a href="//innoki.de/#team">Team</a></li>
+            <li class="menu-item"><a title="Methoden" href="//innoki.de/#methoden">Methoden</a></li>
+            <li class="menu-item"><a title="Referenzen" href="//inoki.de/#referenzen">Referenzen</a></li>
+            <li class="menu-item"><a title="Aktuelles" href="//innoki.de/#aktuelles">Aktuelles</a></li>
+            <li class="menu-item"><a title="Kontakt" href="//innoki.de/#contact">Kontakt</a></li>
+            <li class="lang-item menu-item"><a href="//innoki.de/en/" hreflang="en">English</a></li>
+          </ul>
+        </nav>
+        <nav class="menu-responsive">
+        </nav>
+      </div>
+
+    </div>
   </div>
-
 </header>
-*/}}
