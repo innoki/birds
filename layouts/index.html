@@ -2,10 +2,8 @@
 
 {{ partial "header.html" . }}
 
-<!-- Page Content -->
-<div class="container">
+{{ partial "container_head.html" . }}
 
-  <!-- Page Heading -->
   <div class="row">
     <div class="col-lg-12">
       <h1 class="page-header">Page Heading
@@ -13,30 +11,29 @@
       </h1>
     </div>
   </div>
-  <!-- /.row -->
 
   {{ range where .Data.Pages "Section" "post" }}
-    <!-- Project One -->
     <div class="row">
       <div class="col-md-7">
         <a href="#">
-          <img class="img-responsive" src="https://placekitten.com/700/300" alt="">
+          {{ if .Params.image }}
+            <img class="img-responsive" src="{{ .Params.image }}" alt="">
+          {{ else }}
+            <img class="img-responsive" src="//placekitten.org/700/300" alt="">
+          {{ end }}
         </a>
       </div>
       <div class="col-md-5">
         <h3>{{ .Title | markdownify }}</h3>
-        <h4>Subheading</h4>
+        {{ with .Params.subtitle }}<h4>{{ . }}</h4>{{ end }}
         <p>{{ .Summary }}</p>
-        <a class="btn btn-primary" href="{{ .Permalink }}">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
+        <a class="btn btn-default" href="{{ .Permalink }}">View Post <span class="glyphicon glyphicon-chevron-right"></span></a>
       </div>
     </div>
-    <!-- /.row -->
 
     <hr>
   {{ end }}
 
-</div>
-<!-- /.container -->
-
+{{ partial "container_foot.html" . }}
 
 {{ partial "foot.html" . }}

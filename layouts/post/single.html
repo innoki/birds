@@ -2,5 +2,26 @@
 
 {{ partial "header.html" . }}
 
+{{ partial "container_head.html" . }}
+
+  <h1>{{ .Title }}</h1>
+
+  {{ with .Params.subtitle }}
+    <h4>{{ . }}</h4>
+  {{ end }}
+
+  <hr>
+
+  <p>Posted{{ with .Params.author }} by {{ . }}{{ end }} on {{ .Date.Format "Jan 2, 2006" }}</p>
+  <hr>
+
+  {{ with .Params.image }}
+    <img class="img-responsive" src="{{ . }}" alt="">
+    <hr>
+  {{ end }}
+
+  {{ .Content }}
+
+{{ partial "container_foot.html" . }}
 
 {{ partial "foot.html" . }}
