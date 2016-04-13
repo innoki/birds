@@ -1,6 +1,20 @@
 body {
     padding-top: 70px;
+    font-family: Lato-Light;
 }
 .logoheader img{
     height: 120%;
+}
+
+@font-face {
+    font-family: Lato-Light;
+    src: url(../fonts/Lato-Light.ttf);
+}
+@font-face {
+    font-family: Lato-Regular;
+    src: url(../fonts/Lato-Regular.ttf);
+}
+@font-face {
+    font-family: Lato-Bold;
+    src: url(../fonts/Lato-Bold.ttf);
 }
