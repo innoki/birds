@@ -1,3 +1,4 @@
+/* Align content under top menubar */
 body {
     padding-top: 70px;
     font-family: Lato;
@@ -5,4 +6,22 @@ body {
 }
 .logoheader img{
     height: 120%;
+}
+
+/* Makes a div clickable by expanding an inner a */
+.hyperdiv {
+    position: relative;
+    padding: 10px;
+}
+.hyperdiv:hover {
+    background-color: lightcyan;
+}
+.hyperdiv-link {
+    opacity: 100%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
 }
