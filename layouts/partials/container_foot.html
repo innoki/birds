@@ -3,8 +3,25 @@
     <div class="btn-group" role="group" aria-label="...">
       {{ range $tag, $taxonomy := .Site.Taxonomies.tags }}
         <!--<li><a href="/tags/{{ $tag | urlize }}">{{ $tag }}</a></li>-->
-        <button type="button" class="btn btn-default">{{ $tag }}</button>
+        <a class="btn btn-default" href="/tags/{{ $tag | urlize }}">{{ $tag }}</a>
       {{ end }}
     </div>
+    <hr>
   {{ end }}
+
+  <footer id="footer">
+    <div class="row">
+      <div class="col-md-6">
+        <span>2016 INNOKI GmbH &amp; Co. KG | </span>
+        <span><a href="{{ .Site.Params.ImprintURL }}">Imprint</a></span>
+      </div>
+      <div class="col-md-6 text-right">
+        <span>Find us online! -  </span>
+        <span><a href="{{ .Site.Params.FacebookURL }}"><i class="fa fa-facebook-square"></i> Facebook</a> | </span>
+        <span><a href="{{ .Site.Params.TwitterURL }}"><i class="fa fa-twitter"></i> Twitter</a> | </span>
+        <span><a href="{{ .Site.Params.GitHubURL }}"><i class="fa fa-github"></i> GitHub</a></span>
+      </div>
+    </div>
+  </footer>
+  <br>
 </div>
