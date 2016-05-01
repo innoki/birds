@@ -2,9 +2,9 @@
   <div class="col-md-7">
     <a href="#">
       {{ if .Params.image }}
-        <img class="b-lazy img-responsive" src="{{ .Params.image }}" alt="{{ .Params.image }}"></img>
+        <img class="b-lazy img-responsive" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ .Params.image }}" alt="{{ .Params.image }}"></img>
       {{ else }}
-        <img class="b-lazy img-responsive" src="//placekitten.org/700/300" alt="kitten"></img>
+        <img class="b-lazy img-responsive" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="//placekitten.org/700/300" alt="kitten"></img>
       {{ end }}
     </a>
   </div>
