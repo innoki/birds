@@ -2,9 +2,9 @@
   <div class="col-md-7">
     <a href="#">
       {{ if .Params.image }}
-        <img class="img-responsive" src="{{ .Params.image }}" alt="">
+        <img class="b-lazy img-responsive" src="{{ .Params.image }}" alt="{{ .Params.image }}">
       {{ else }}
-        <img class="img-responsive" src="//placekitten.org/700/300" alt="">
+        <img class="b-lazy img-responsive" src="//placekitten.org/700/300" alt="kitten">
       {{ end }}
     </a>
   </div>
